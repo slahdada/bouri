@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   
   return {
-    // Cette ligne est essentielle pour corriger la page blanche sur GitHub Pages
+    // Indispensable pour GitHub Pages
     base: '/oussamaprm/', 
     
     plugins: [react(), tailwindcss()],
@@ -21,9 +21,8 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, '.'),
       },
     },
-    
+
     server: {
-      // HMR est géré automatiquement
       hmr: process.env.DISABLE_HMR !== 'true',
     },
   };
