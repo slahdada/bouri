@@ -3,10 +3,14 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig, loadEnv} from 'vite';
 
+import { defineConfig } from 'vite'
+import react from '@vitejs/react-refresh' // ou votre plugin actuel
+
 export default defineConfig({
-  base: '/oussamaprm/',
-  // ... le reste de votre config
-})
+  base: '/oussamaprm/', // AJOUTEZ CETTE LIGNE
+  plugins: [react()],
+}
+
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
