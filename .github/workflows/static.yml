@@ -35,6 +35,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}  # ✅ Ajouté
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -42,7 +44,6 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # On déploie le dossier compilé généré par Vite
           path: './dist'
 
       - name: Deploy to GitHub Pages
