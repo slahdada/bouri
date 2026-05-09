@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
   
   return {
     // Indispensable pour GitHub Pages
-    base: '/oussamaprm/', 
+    base: '/bouri/', 
     
     plugins: [react(), tailwindcss()],
     
